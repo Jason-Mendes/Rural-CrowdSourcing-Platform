@@ -1,7 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
+namespace rcsPlatform.Controllers;
 public class RegisterModel
 {
     public string Email { get; set; }

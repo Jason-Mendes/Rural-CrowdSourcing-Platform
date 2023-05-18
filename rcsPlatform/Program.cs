@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using rcsPlatform.Models;
 using rcsPlatform;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,7 @@ builder.Services.AddDbContext<rcsDbContext>(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure method for the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -33,7 +34,7 @@ if (!app.Environment.IsDevelopment())
 //     RequestPath = "/StaticFiles"
 // });
 
-
+app.MapControllers();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 string staticFilesFolder = Path.Combine(app.Environment.ContentRootPath, "MyStaticFiles");

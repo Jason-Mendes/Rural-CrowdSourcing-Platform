@@ -6,6 +6,7 @@ import {Developers} from './components/Developers';
 import Customers from './components/Customers';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Comments from './components/Comments';
 const AppRoutes = [
   {
     index: true,
@@ -39,6 +40,10 @@ const AppRoutes = [
   {
     path: '/fetch-data',
     element: <FetchData />
+  },
+  {
+    path: '/comments',
+    element: <Comments />
   }
 ];
 export default AppRoutes;
