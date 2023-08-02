@@ -1,6 +1,10 @@
 # Prerequisites
 *.d
 
+# Ignore appsettings files that may contain sensitive data
+rcsPlatform/appsettings.json
+rcsPlatform/appsettings.Development.json
+
 # Object files
 *.o
 *.ko
